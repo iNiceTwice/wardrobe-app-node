@@ -3,9 +3,10 @@ const mongoose = require("mongoose")
 const routes = require("./routes/index.js")
 const path = require("path")
 const app = express()
+const {mongoUri} = require("./dev.js")
 
 //calling database
-mongoose.connect("mongodb+srv://nicetwice:nice123@cluster0-mvptq.mongodb.net/test?retryWrites=true", { useNewUrlParser: true })
+mongoose.connect(mongoUri, { useNewUrlParser: true })
     .then(data=>{console.log("Database -online-")})
     .catch(err=>{console.log(err)})
 

@@ -1,8 +1,6 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
-let fecha = new Date()
-
 const tiendaSchema = new Schema ({
     nombre:{type:String,required:true},
     webs:[String],
